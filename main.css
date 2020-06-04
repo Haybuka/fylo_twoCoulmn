@@ -13,7 +13,6 @@ div#container {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(5, minmax(0, auto));
-	margin: 10px;
 }
 
 #container nav {
@@ -90,8 +89,7 @@ section.firstSec {
 	background-color: hsl(240, 75%, 98%);
 	background-image: url(images/bg-curve-desktop.svg);
 	background-repeat: no-repeat;
-	background-position: top;
-	background-position-y: -50px;
+
 	padding: 50px;
 	margin-top: 50px;
 }
@@ -252,4 +250,133 @@ footer .links {
 	display: flex;
 	padding: 0;
 	margin: 0;
+}
+
+@media screen and (max-width: 375px) {
+	#container nav img {
+		grid-column: 1/2;
+		grid-row: 1/2;
+		margin: 0;
+		padding: 0;
+		width: 80px;
+	}
+	#container ul.nav {
+		grid-column: 3/13;
+		grid-row: 1/2;
+		padding: 0;
+		margin: 0;
+	}
+	#container ul.nav li {
+		margin-right: 5px;
+	}
+	#container main #rightMain {
+		grid-column: 1/13;
+		grid-row: 1/2;
+	}
+	#container main #rightMain img {
+		width: 300px;
+	}
+
+	#container main #leftMain {
+		grid-column: 1/13;
+		margin-top: 30px;
+		text-align: center;
+	}
+
+	main #leftMain input {
+		grid-column: 1/13;
+		grid-row: 2/3;
+		width: 100%;
+		padding: 5px;
+	}
+
+	main #leftMain button {
+		grid-column: 1/13;
+		grid-row: 3/4;
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	section.firstSec .leftArticle {
+		grid-column: 1/13;
+		grid-row: 2/3;
+	}
+	section.firstSec .leftArticle #productive {
+		grid-column: 1/13;
+		grid-row: 1/2;
+	}
+	section.firstSec .leftArticle #productive a {
+		text-align: center;
+	}
+	section.firstSec .leftArticle #testimony {
+		grid-column: 1/13;
+		grid-row: 2/3;
+		margin: 20px 0;
+	}
+	section.firstSec .leftArticle #testimony .kyle h4 {
+		grid-column: 2/13;
+		grid-row: 1/2;
+	}
+
+	section.firstSec .leftArticle #testimony .kyle small {
+		grid-column: 2/13;
+		grid-row: 2/3;
+	}
+
+	section.firstSec .rightArticle {
+		grid-column: 1/13;
+		grid-row: 1/2;
+	}
+
+	section.firstSec .rightArticle img {
+		width: 300px;
+	}
+	section.secondSec .earlyAccess {
+		grid-row: 1/2;
+		grid-column: 1/13;
+		text-align: center;
+	}
+	section.secondSec .getStarted {
+		grid-row: 2/3;
+		grid-column: 1/13;
+	}
+
+	section.secondSec .getStarted input {
+		width: 100%;
+		padding: 5px;
+	}
+	section.secondSec .getStarted button {
+		width: 100%;
+		font-weight: 700;
+	}
+
+	footer img {
+		grid-column: 1/13;
+		grid-row: 1/2;
+		width: 100px;
+	}
+
+	footer .firstUl {
+		grid-column: 1/13;
+		grid-row: 2/3;
+		margin-top: 20px;
+	}
+
+	footer .secondUl {
+		grid-column: 1/13;
+		grid-row: 3/4;
+		margin-top: 20px;
+	}
+
+	footer .thirdUl {
+		grid-column: 1/13;
+		grid-row: 4/5;
+		margin-top: 20px;
+	}
+
+	footer .links {
+		grid-column: 1/13;
+		grid-row: 5/6;
+		justify-content: center;
+	}
 }
